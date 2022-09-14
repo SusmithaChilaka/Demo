@@ -1,0 +1,75 @@
+<div style="text-align:center; ">
+
+    <p style=" border:black; border-style:outset; background-color: #f7f2f2;">   <br>
+    <a style ="font-size:x-large;"> Create a New Book </a>    <br>   <br>
+    
+    <label style="color: teal;"></label>
+    <label for = "title"> Book Title: </label>
+    <input [(ngModel)]='book.title'/> <br><br>
+    
+    <label for = "price">  Price: </label>
+    <input [(ngModel)] = 'book.price' type='number'/><br><br>
+    
+    <label for = "author"> Author: </label>
+    <input [(ngModel)]='book.author'/><br><br>
+    
+    <label for = "publisher"> Publisher: </label>
+    <input [(ngModel)]='book.publisher'/> <br><br>
+    
+    <label for = "date"> Published Date: </label>
+    <input [(ngModel)]='book.date'/>  <br><br>
+    
+    <label for="books">Choose Book Category: </label>
+    <select id="category" name="books">
+      <option value="drama">Drama</option>
+      <option value="comedy">Comedy</option>
+      <option value="sifi">Si-Fi</option>
+      <option value="tragedy">Tragedy</option>
+      <option value="love">Love</option>
+      <option value="adventure">Adventure</option>
+      <option value="horror">Horror</option>
+    </select><br> <br>
+    
+    <label for = "content"> Content: </label>
+    <input [(ngModel)]='book.content' style="height:50px; width:200px;" />   <br><br>
+    
+    <button (click)='save()' > save </button> <br><br>
+    </p>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2 style="background-color:darkseagreen">Book List</h2>
+        </div>
+        <div class="panel-body" style="background-color: #f7f2f2; border:black; border-style:outset; ">
+    <table class="table table-striped" style="display:block ;">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Price</th> 
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Published Date</th>
+            <th>Category</th>
+            <th>Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let book of books'>
+            <td>{{book.title}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.publisher}}</td>
+            <td>{{book.date}}</td>
+            <td>{{book.category}}</td>
+            <td>{{book.content}}</td>
+            <td><button (click)='deleteBook(book.id)' style="background-color: rgb(244, 226, 229) ;">Delete Book</button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+
+
+
+    </div>
