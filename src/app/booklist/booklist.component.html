@@ -1,0 +1,62 @@
+<header style="background-image:url(assets/img/sky.JPG) ;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-3 col-md-3">
+                <div>
+                    <img [src]="myimage" alt="" style="width: 150px ;">
+                </div>
+            </div>
+            <div class= "col-md-9 col-md-9 col-md-9 text-end">
+                <div class="menu">
+                    <ul>
+                        <li routerLink='/home'>Home</li>
+                        <li routerLink='/bookform' >Create Book</li>
+                        <li routerLink='/booklist'>Book List</li>
+                        <li routerLink='/login'>Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<br>
+<div style="size: 10px; ;" class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 style="background: rgb(179, 227, 182);
+      background:linear-gradient(90deg, rgb(179, 227, 182)0%, rgb(140, 115, 190)100%); text-align:center;">Book List</h2><br>
+    </div>
+    <div class="panel-body" style="background: rgb(197, 230, 199);
+    background:linear-gradient(90deg, rgb(207, 224, 208)0%, rgb(209, 202, 224)100%); border:black; border-style:outset; ">
+<table class="table table-striped" style="display:block ;">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Price</th> 
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Published Date</th>
+        <th>Category</th>
+        <th>Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let book of books'>
+        <td>{{book.title}}</td>
+        <td>{{book.price}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.publisher}}</td>
+        <td>{{book.date}}</td>
+        <td>{{book.category}}</td>
+        <td>{{book.content}}</td>
+        <td><button (click)='deleteBook(book.id)' style="background-color: rgb(244, 226, 229) ;">Delete Book</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<br><br>
+<div style="text-align:center; ">
+
+</div>

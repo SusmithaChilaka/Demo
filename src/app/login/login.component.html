@@ -1,0 +1,47 @@
+
+<header style="background-image:url(assets/img/sky.JPG) ;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-3 col-md-3">
+                <div>
+                    <img [src]="myimage" alt="" style="width: 150px ;">
+                </div>
+            </div>
+            <div class= "col-md-9 col-md-9 col-md-9 text-end">
+                <div class="menu">
+                    <ul>
+                        <li routerLink='/login'>Login</li>
+                        <li routerLink='/register'>Register</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-centre">
+                    <h1>Login</h1>
+                    <h6>Please Enter User Name and password</h6>
+                </div>
+                <form>
+                    <form >
+                        <div class="mb-3">
+                          <label for="username" class="form-label">User Name</label>
+                          <input [(ngModel)]='user.username' type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label">Password</label>
+                          <input [(ngModel)]='user.password' type="text" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" style="background-color:rgb(30, 117, 88);" (click)="userLogin()">Login</button>
+                      </form>
+                      <a routerLink="/register" style="color:rgb(44, 1, 1) ;">New User!! Click here to Register</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

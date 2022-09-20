@@ -1,0 +1,38 @@
+.card{
+    padding: 40px;
+    top:5%;
+    left:20%;
+    bottom:10%;
+    width: 1000px;
+    background: rgb(197, 230, 199);
+    background:linear-gradient(90deg, rgb(180, 223, 183)0%, rgb(181, 165, 217)100%);
+}
+
+
+
+header{
+    padding: 5px;
+}
+
+
+
+.menu ul{
+
+    padding:0;
+    margin:0;
+}
+
+.menu ul li{
+    list-style-type:none;
+    display: inline-block;
+    font-size:30px;
+    margin-left: 24px;
+margin-top: 30px;
+}
+
+.menu ul li:hover{
+    color:white;
+    cursor:pointer;
+    transition:0.4s ease-out;
+
+}

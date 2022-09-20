@@ -1,0 +1,60 @@
+<header style="background-image:url(assets/img/sky.JPG) ;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-3 col-md-3">
+                <div>
+                    <img [src]="myimage" alt="" style="width: 150px ;">
+                </div>
+            </div>
+            <div class= "col-md-9 col-md-9 col-md-9 text-end">
+                <div class="menu">
+                    <ul>
+                        <li routerLink='/login'>Login</li>
+                        <li routerLink='/register'>Register</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-centre">
+                    <h1>Register</h1>
+                    <h6>Please fill the below details</h6>
+                </div>
+                <form>
+                    <form [formGroup]="loginform" #name="ngForm">
+                        <div class="mb-3">
+                          <label for="username" class="form-label">User Name</label>
+                          <input formControlName="username" [(ngModel)]='user.username' type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input formControlName="email" [(ngModel)]='user.email' type="text" class="form-control" id="email" name="email" required>
+                          </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label">Password</label>
+                          <input formControlName="password" [(ngModel)]='user.password' type="text" class="form-control" id="password" name="password" aria-describedby="passwordHelpBlock" required>
+                          <div id="passwordHelpBlock" class="form-text">
+                            Your password must be 4-20 characters long, and must not contain spaces, special characters, or emoji.
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mobilenumber" class="form-label">Mobile Number</label>
+                            <input formControlName="mobilenumber" [(ngModel)]='user.mobilenumber' type="text" class="form-control" id="mobilenumber" name="mobilenumber" aria-describedby="mobileNumberHelpBlock"  required>
+                            <div id="mobileNumberHelpBlock" class="form-text">
+                                Please enter your 10 digit mobile number.
+                              </div>
+                          </div>
+                        <button [disabled]="!loginform.valid" type="button" class="btn btn-primary" style="background-color:rgb(30, 117, 88);"  (click)="register()">Register</button>
+                      </form>
+                      <a routerLink="/login" style="color:rgb(44, 1, 1) ;">Already a User!! Click here to login</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
