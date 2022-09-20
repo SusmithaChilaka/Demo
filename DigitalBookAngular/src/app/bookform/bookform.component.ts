@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgToastService } from 'ng-angular-popup';
 import { BookService } from '../book.service';
 import Book from '../entity/book';
 
@@ -10,24 +11,13 @@ import Book from '../entity/book';
 export class BookformComponent implements OnInit{
 
   book:Book= new Book('Othello', 'shakesphere','SVNC','1998-08-17','drama', 500 ,'othello book');
-  books:any =[];
- 
-  constructor(public bookservice:BookService) { }
-  ngOnInit(): void {
-    this.getBooks();
-  }
 
-   getBooks() {
-    const observable = this.bookservice.getBooks();
-    observable.subscribe(books => {
-      this.books = books;
-    })
-  }
-  deleteBook(id: number) {
-    const observable = this.bookservice.deleteBook(id);
-    observable.subscribe(response => {
-      this.getBooks();
-    })
+  constructor(public bookservice:BookService, private toast:NgToastService) { }
+
+  myimage:string="assets/img/digitalbookimage.JPG";
+  sky:string="assets/img/sky.JPG"
+  ngOnInit(): void {
+   
   }
 
   save(){
@@ -36,11 +26,11 @@ export class BookformComponent implements OnInit{
     const observable = this.bookservice.saveBook(this.book);
     observable.subscribe((response)=>{ //sucess handler
       console.log(response);
+      this.toast.success({detail:"Success Message", summary:"Book Created Successfully", duration:5000})
     },
     (error)=>{   //error handler
-      alert('something went wrong');
+      this.toast.error({detail:"Error Message", summary:"Something went wrong",});
     }
     )
   }
-
 }

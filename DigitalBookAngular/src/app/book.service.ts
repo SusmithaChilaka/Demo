@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, observable } from 'rxjs';
 import Book from './entity/book';
+import { User } from './entity/user';
 
 const API_URL = "http://localhost:8088/books/"
 @Injectable({
@@ -20,4 +22,5 @@ export class BookService {
   deleteBook(id: number) {
     return this.client.delete(API_URL + id);
   }
+
 }
