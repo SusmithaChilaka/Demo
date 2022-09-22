@@ -1,16 +1,11 @@
 .card{
-    margin-top: 10px;
-    border: none;
-    width: 500px;
-    top:4%;
     padding: 40px;
-    position: absolute;
-    
-    left:50%;
-    transform: translate(-50%, 50%);
-    background: rgb(137, 214, 142);
-    background:linear-gradient(90deg, rgb(137, 214, 142)0%, rgb(140, 115, 190)100%);
-    //color: white;
+    top:5%;
+    left:45%;
+    bottom:10%;
+    width: 700px;
+    background: rgb(197, 230, 199);
+    background:linear-gradient(90deg, rgb(180, 223, 183)0%, rgb(79, 125, 168)100%);
 }
 
 
@@ -18,6 +13,8 @@
 header{
     padding: 5px;
 }
+
+
 
 .menu ul{
 
@@ -39,4 +36,3 @@ margin-top: 30px;
     transition:0.4s ease-out;
 
 }
-

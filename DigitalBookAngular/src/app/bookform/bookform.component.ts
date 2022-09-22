@@ -26,6 +26,7 @@ export class BookformComponent implements OnInit{
     const observable = this.bookservice.saveBook(this.book);
     observable.subscribe((response)=>{ //sucess handler
       console.log(response);
+      this.book = new Book('','','','','',0,'');
       this.toast.success({detail:"Success Message", summary:"Book Created Successfully", duration:5000})
     },
     (error)=>{   //error handler

@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable } from 'rxjs';
 import Book from './entity/book';
-import { User } from './entity/user';
 
 const API_URL = "http://localhost:8088/books/"
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
-
+  
+  ID:any;
   constructor(public client:HttpClient) { } 
   saveBook(book : Book){
    return  this.client.post(API_URL,book)
@@ -21,6 +21,11 @@ export class BookService {
 
   deleteBook(id: number) {
     return this.client.delete(API_URL + id);
+  }
+
+  updateBook(id: number, value: any){
+    
+    return this.client.put(API_URL+id, value);
   }
 
 }

@@ -1,0 +1,81 @@
+<header style="background-image:url(assets/img/sky.JPG) ;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-3 col-md-3">
+                <div>
+                    <img [src]="myimage" alt="" style="width: 150px ;">
+                </div>
+            </div>
+            <div class= "col-md-9 col-md-9 col-md-9 text-end">
+                <div class="menu">
+                    <ul>
+                        <li routerLink='/home'>Home</li>
+                        <li routerLink='/bookform' >Create Book</li>
+                        <li routerLink='/booklist'>Book List</li>
+                        <li routerLink='/login'>Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-centre">
+                    <h1>Update Book</h1>
+                    <h6>Please fill the below details</h6>
+                </div>
+                <form>
+                    <form>
+                        <div class="mb-3">
+                          <label for="title" class="form-label">Book Title:    </label>
+                          <input [(ngModel)]='book.title' type="text" id="title" class="form-control" name="title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="author" class="form-label">Author   </label>
+                            <input [(ngModel)]='book.author' type="text" id="author" class="form-control" name="author">
+                          </div>
+                          <div class="mb-3">
+                            <label for="price" class="form-label">Price   </label>
+                            <input [(ngModel)]='book.price' type="text" id="price" class="form-control" name="price">
+                          </div>
+                          <div class="mb-3">
+                            <label for="publisher" class="form-label">Publisher   </label>
+                            <input [(ngModel)]='book.publisher' type="text" id="publisher" class="form-control" name="publisher">
+                          </div>
+                          <div class="mb-3">
+                            <label for="date" class="form-label">Date   </label>
+                            <input matInput [matDatepicker]="datepicker" [(ngModel)]='book.date' type="text" id="date" class="form-control" name="date">
+                            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                            <mat-datepicker #datepicker></mat-datepicker>
+                          </div>
+                          <div class="mb-3">
+                            <label for="category" class="form-label">Category   </label>
+                            <select [(ngModel)] ='book.category' type="text" id="category" class="form-control" name="category">
+                                <option value="drama">Drama</option>
+                                <option value="comedy">Comedy</option>
+                                <option value="sifi">Si-Fi</option>
+                                <option value="tragedy">Tragedy</option>
+                                <option value="love">Love</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="horror">Horror</option>
+                                <option value="fantasy">Fantasy</option>
+                                <option value="action">Action</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="content" class="form-label">Content   </label>
+                            <input [(ngModel)]='book.content' type="text" id="content" class="form-control" name="content" style="height:100px;">
+                          </div>
+                        <button (click)='updateBook()' style="background: rgb(179, 227, 182);
+                        background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; width: 200px; height: 40px;" > Update Book</button>
+                      </form>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>  

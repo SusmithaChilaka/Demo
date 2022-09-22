@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { BookService } from '../book.service';
+import Book from '../entity/book';
 
 @Component({
   selector: 'app-booklist',
@@ -11,7 +13,7 @@ export class BooklistComponent implements OnInit {
 
   books:any =[];
  
-  constructor(public bookservice:BookService, private toast:NgToastService) { }
+  constructor(public bookservice:BookService, private toast:NgToastService, private route:Router) { }
 
   myimage:string="assets/img/digitalbookimage.JPG";
   sky:string="assets/img/sky.JPG"
@@ -36,6 +38,10 @@ export class BooklistComponent implements OnInit {
     (error)=>{   //error handler
       this.toast.error({detail:"Error Message", summary:"Something went wrong",});
     })
+  }
+  updateBook(id: number){
+    this.bookservice.ID=id;
+    
   }
 
 }

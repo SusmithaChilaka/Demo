@@ -49,8 +49,8 @@
         <td>{{book.date}}</td>
         <td>{{book.category}}</td>
         <td>{{book.content}}</td>
-        <td><button (click)='deleteBook(book.id)' style="background-color: rgb(244, 226, 229) ;">Delete Book</button>
-        </td>
+        <td><button routerLink='/updateform' (click)='updateBook(book.id)' style="background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white;">update Book</button> </td> 
+        <td><button (click)='deleteBook(book.id)' style="background:linear-gradient(90deg, rgb(218, 216, 98)0%, rgb(220, 94, 94)100%); ">Delete Book</button></td>  
       </tr>
     </tbody>
 </table>

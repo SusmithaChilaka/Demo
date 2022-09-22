@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
     })
   }
   myimage:string="assets/img/digitalbookimage.JPG";
-  sky:string="assets/img/sky.JPG"
+  sky:string="assets/img/sky.JPG";
+  ebook:string="assets/img/ebook.JPG";
 
   ngOnInit(): void {
   }

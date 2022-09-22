@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   book5:string="assets/img/book-5.JPG";
   book6:string="assets/img/book-6.JPG";
   white:string="assets/img/white.JPG";
+  ebook:string="assets/img/ebook.JPG";
 
   ngOnInit(): void {
   }

@@ -18,6 +18,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import {MatSortModule} from '@angular/material/sort';
+import { UpdateformComponent } from './updateform/updateform.component';
 
 
 const routes: Routes= [
@@ -25,6 +27,7 @@ const routes: Routes= [
   { path: 'booklist', component:BooklistComponent},
   { path: 'home', component:HomeComponent},
   { path: 'register', component:RegisterComponent},
+  { path: 'updateform', component:UpdateformComponent},
 
 ]
 
@@ -35,13 +38,14 @@ const routes: Routes= [
     BooklistComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    UpdateformComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, FormsModule, HttpClientModule,  RouterModule.forRoot(routes), NgToastModule, ReactiveFormsModule,
-    MatDatepickerModule,MatInputModule,  MatNativeDateModule, BrowserAnimationsModule, NgxSliderModule
+    MatDatepickerModule,MatInputModule,  MatNativeDateModule, BrowserAnimationsModule, NgxSliderModule, MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
