@@ -17,9 +17,10 @@ export class RegisterComponent implements OnInit {
   constructor(public loginservice:LoginService, private route:Router, private toast:NgToastService) { 
     this.loginform=new FormGroup({
       'username': new FormControl('',Validators.required),
-      'password': new FormControl('',Validators.required),
-      'email': new FormControl('',Validators.required),
-      'mobilenumber': new FormControl('',Validators.required)
+      'password': new FormControl('',[Validators.required, Validators.maxLength(20),Validators.minLength(4)]),
+      'email': new FormControl('',[Validators.required, Validators.email]),
+      'mobilenumber': new FormControl('',[Validators.required, Validators.maxLength(10)]),
+      'role':new FormControl('',Validators.required),
     })
    }
   myimage:string="assets/img/digitalbookimage.JPG";
@@ -41,4 +42,6 @@ export class RegisterComponent implements OnInit {
     }
     )
   }
+  
 }
+

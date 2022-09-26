@@ -6,4 +6,5 @@ export class User{
     password!:string;
     email!:string;
     mobilenumber!:number;
+    role:string;
 }

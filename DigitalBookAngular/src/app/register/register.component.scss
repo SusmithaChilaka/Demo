@@ -23,14 +23,25 @@ header{
 .menu ul li{
     list-style-type:none;
     display: inline-block;
-    font-size:30px;
-    margin-left: 24px;
-margin-top: 30px;
+    font-size:25px;
+    margin-left: 30px;
+margin-top: 40px;
 }
 
 .menu ul li:hover{
     color:white;
     cursor:pointer;
     transition:0.4s ease-out;
+
+}
+
+
+.card.form-control.ng-touched.ng-invalid{
+    border: 1px solid red;
+
+}
+
+.card.form-control.ng-touched.ng-valid{
+    border: 1px solid green;
 
 }

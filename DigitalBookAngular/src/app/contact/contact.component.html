@@ -1,0 +1,22 @@
+<br><br><section class="contact">
+
+    <form action="" method="post">
+       <h3>say something!</h3>
+       <input type="text" name="name" required placeholder="enter your name" class="box">
+       <input type="email" name="email" required placeholder="enter your email" class="box">
+       <input type="number" name="number" required placeholder="enter your mobile number" class="box">
+       <textarea name="message" class="box" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+       <input type="submit" value="send message" name="send" class="btn" (click)='contact()' style="background-color: rgb(198, 220, 228);">
+    </form>
+ 
+ </section><br>
+
+ <div style="text-align:center; ">
+ <nav>
+    <button routerLink='/readerhome' style="width: 300px; height: 40px; background: rgb(179, 227, 182);
+    background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white;">Return to Home Page</button> <br><br>
+</nav>
+
+<router-outlet></router-outlet>
+
+</div>

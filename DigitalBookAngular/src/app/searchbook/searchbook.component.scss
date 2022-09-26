@@ -1,0 +1,53 @@
+header{
+    padding: 5px;
+}
+
+.menu ul{
+    padding:0;
+    margin:0;
+}
+
+.menu ul li{
+    list-style-type:none;
+    display: inline-block;
+    font-size:25px;
+    margin-left: 30px;
+margin-top: 40px;
+}
+
+.menu ul li:hover{
+    color:white;
+    cursor:pointer;
+    transition:0.4s ease-out;
+
+}
+
+.home{
+ text-align: center;
+ margin-top: 40px;
+}
+
+
+.search-form form{
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    gap:1rem;
+ }
+ 
+ .search-form form .btn{
+    margin-top: 0;
+    background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); 
+    color: white;
+    width:10%
+ }
+ 
+ .search-form form .box{
+    width: 100%;
+    padding:1.2rem 1.4rem;
+    border:var(--border);
+    font-size: 2rem;
+    color:var(--black);
+    background-color:rgb(183, 221, 209);
+    border-radius: .5rem;
+ }

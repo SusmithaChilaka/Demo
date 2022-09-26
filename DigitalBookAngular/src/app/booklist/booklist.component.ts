@@ -22,6 +22,11 @@ export class BooklistComponent implements OnInit {
     this.getBooks();
   }
 
+  public popoverTitle='Title';
+  public popoverMessage='message';
+  public confirmClicked:boolean=false;
+  public cancelClicked:boolean=false;
+
   getBooks() {
     const observable = this.bookservice.getBooks();
     observable.subscribe(books => {
@@ -41,7 +46,13 @@ export class BooklistComponent implements OnInit {
   }
   updateBook(id: number){
     this.bookservice.ID=id;
-    
   }
 
+
+  key:string ='price';
+  reverse:boolean=false;
+  sort(key){
+    this.key=key;
+    this.reverse=!this.reverse;
+  }
 }

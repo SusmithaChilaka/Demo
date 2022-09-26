@@ -1,0 +1,52 @@
+<header style="background-image:url(assets/img/sky.JPG) ;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-3 col-md-3">
+                <div>
+                    <img [src]="myimage" alt="" style="width: 150px ;">
+                </div>
+            </div>
+            <div class= "col-md-9 col-md-9 col-md-9 text-end">
+                <div class="menu">
+                    <ul>
+                        <li routerLink='/adminhome'>Home</li>
+                        <li routerLink='/adminbooklist'>Book List</li>
+                        <li routerLink='/userlist'>User List</li>
+                        <li routerLink='/login'>Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<br><br>
+<div style="size: 10px; margin-left: 30%;" class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 style="background: rgb(179, 227, 182);
+      background:linear-gradient(90deg, rgb(179, 227, 182)0%, rgb(140, 115, 190)100%); width:53%; text-align: center;">User List</h2>
+    </div>
+    <div class="panel-body" style="background: rgb(197, 230, 199);
+    background:linear-gradient(90deg, rgb(207, 224, 208)0%, rgb(209, 202, 224)100%); border:black; border-style:outset; width:53%; padding:2%">
+<table class="table table-striped" style="display:block ;">
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>Email</th> 
+        <th>Mobile Number</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let user of users'>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.mobilenumber}}</td>
+        <td>{{user.role}}</td>
+        <td><button (click)='deleteUser(user.id)' style="background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; ">Delete User</button></td>
+      </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<br><br>

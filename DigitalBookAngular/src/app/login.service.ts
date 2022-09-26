@@ -11,6 +11,7 @@ const API_URL = "http://localhost:8088/books"
 export class LoginService {
   
   book:User= new User( );
+  role:string;
   constructor(public client:HttpClient) { }
 
   userLogin(user:User):Observable<object>{
@@ -22,4 +23,7 @@ export class LoginService {
   register(user : User){
     return  this.client.post(API_URL+'/register',user)
    }
+   deleteUser(id: number) {
+    return this.client.delete(API_URL +'/user/'+ id);
+  }
 }

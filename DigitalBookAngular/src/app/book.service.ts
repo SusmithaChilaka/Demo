@@ -28,4 +28,20 @@ export class BookService {
     return this.client.put(API_URL+id, value);
   }
 
+  getBookList() {
+    return this.client.get(API_URL)
+  }
+
+  getUsers(){
+    return this.client.get(API_URL+'user')
+  }
+  purchaseBook(books:Book){
+    return this.client.post(API_URL +'buy',books)
+  }
+
+  searchBook(title:string){
+    console.log(title);
+    return this.client.get(API_URL+'search/'+title)
+  }
+
 }

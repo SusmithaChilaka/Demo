@@ -1,0 +1,64 @@
+.about .flex{
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+ 
+ .about .flex .image{
+    flex:1 1 1rem;
+ }
+ 
+ .about .flex .image img{
+    width: 75%;
+ }
+ 
+ .about .flex .content{
+    flex:1 1 40rem;
+    padding:2rem;
+    background-color: var(--light-bg);
+ }
+ 
+ .about .flex .content h3{
+    font-size: 2rem;
+    color:var(--black);
+    text-transform: uppercase;
+ }
+ 
+ .about .flex .content p{
+    padding:1rem 0;
+    line-height: 2;
+    font-size: 1rem;
+    color:var(--light-color);
+ }
+
+ header{
+    padding: 5px;
+}
+
+.menu ul{
+    padding:0;
+    margin:0;
+}
+
+.menu ul li{
+    list-style-type:none;
+    display: inline-block;
+    font-size:25px;
+    margin-left: 30px;
+margin-top: 40px;
+}
+
+.menu ul li:hover{
+    color:white;
+    cursor:pointer;
+    transition:0.4s ease-out;
+
+}
+
+.home{
+ text-align: center;
+ margin-top: 40px;
+}
+

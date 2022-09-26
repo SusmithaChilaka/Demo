@@ -1,0 +1,66 @@
+<header style="background-image:url(assets/img/sky.JPG) ;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-3 col-md-3">
+                <div>
+                    <img [src]="myimage" alt="" style="width: 150px ;">
+                </div>
+            </div>
+            <div class= "col-md-9 col-md-9 col-md-9 text-end">
+                <div class="menu">
+                    <ul>
+                        <li>Home</li>
+                        <li routerLink='/readerbooklist'>Book List</li>
+                        <li routerLink='/searchbook'>Search Book</li>
+                        <li routerLink='/about'>About Us</li>
+                        <li routerLink='/login'>Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<br><br>
+
+<section class="homeimage" id="homeimage" >
+    <div class="image-container" style="text-align:center ;">
+<div style="text-align:center; ">
+    <h1 style="font-size:xx-large ;"> Welcome to Digital Book Application </h1> <br><br>
+    
+    <nav>
+        <button routerLink='/readerbooklist' style="width: 300px; height: 40px; background: rgb(179, 227, 182);
+        background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; ">Book List</button> <br><br>
+    </nav>
+    <router-outlet></router-outlet>
+
+    <nav>
+        <button routerLink='/contact' style="width: 300px; height: 40px; background: rgb(179, 227, 182);
+        background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; ">Contact Us</button> <br><br>
+    </nav>
+    <router-outlet></router-outlet>
+    
+    <nav>
+        <button routerLink='/login' style="width: 300px; height: 40px; background: rgb(179, 227, 182);
+        background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; ">Logout</button> <br>
+    </nav>
+    <router-outlet></router-outlet>
+    
+    </div>
+    </div>
+</section>
+
+
+    <section class="home" id="home">
+        <div class="image-container">
+            <h1>Top picks of the day</h1>
+            <img [src]="book1" alt="" style="width: 150px ;" routerLink='/stone'>
+            <img [src]="white" alt="" style="width: 30px; height:5px;">
+            <img [src]="book2" alt="" style="width: 147px ;" routerLink='/hobbit'>
+            <img [src]="white" alt="" style="width: 30px; height:5px;">
+            <img [src]="book4" alt="" style="width: 150px ;" routerLink='/night'>
+            <img [src]="white" alt="" style="width: 30px; height:5px;">
+            <img [src]="book5" alt="" style="width: 150px ;" routerLink='/lost'>
+            <img [src]="white" alt="" style="width: 30px; height:5px;">
+            <img [src]="book6" alt="" style="width: 150px ;" routerLink='/girl'>
+        </div>      
+    </section>

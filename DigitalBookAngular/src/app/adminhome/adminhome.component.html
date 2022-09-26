@@ -1,0 +1,50 @@
+<header style="background-image:url(assets/img/sky.JPG) ;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-3 col-md-3">
+                <div>
+                    <img [src]="myimage" alt="" style="width: 150px ;">
+                </div>
+            </div>
+            <div class= "col-md-9 col-md-9 col-md-9 text-end">
+                <div class="menu">
+                    <ul>
+                        <li>Home</li>
+                        <li routerLink='/adminbooklist'>Book List</li>
+                        <li routerLink='/userlist'>User List</li>
+                        <li routerLink='/login'> Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<br><br>
+
+
+<section class="homeimage" id="homeimage" >
+    <div class="image-container" style="text-align:center ;">
+<div style="text-align:center; ">
+    <h1 style="font-size:xx-large ;"> Welcome to Digital Book Application </h1> <br><br>
+    
+    <nav>
+        <button routerLink='/adminbooklist' style="width: 300px; height: 40px; background: rgb(179, 227, 182);
+        background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; ">Book List</button> <br><br>
+    </nav>
+    <router-outlet></router-outlet>
+
+    <nav>
+        <button routerLink='/userlist' style="width: 300px; height: 40px; background: rgb(179, 227, 182);
+        background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; ">User List</button> <br><br>
+    </nav>
+    <router-outlet></router-outlet>
+    
+    <nav>
+        <button routerLink='/login' style="width: 300px; height: 40px; background: rgb(179, 227, 182);
+        background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; ">Logout</button> <br><br><br>
+    </nav>
+    <router-outlet></router-outlet>
+    
+    </div>
+    </div>
+</section>

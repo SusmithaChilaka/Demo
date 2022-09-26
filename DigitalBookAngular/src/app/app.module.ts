@@ -20,7 +20,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import {MatSortModule} from '@angular/material/sort';
 import { UpdateformComponent } from './updateform/updateform.component';
-
+import { ReaderhomeComponent } from './readerhome/readerhome.component';
+import { ReaderbooklistComponent } from './readerbooklist/readerbooklist.component';
+import { PaymentComponent } from './payment/payment.component';
+import { AboutComponent } from './about/about.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { AdminbooklistComponent } from './adminbooklist/adminbooklist.component';
+import { StoneComponent } from './stone/stone.component';
+import { HobbitComponent } from './hobbit/hobbit.component';
+import { NightComponent } from './night/night.component';
+import { LostComponent } from './lost/lost.component';
+import { GirlComponent } from './girl/girl.component';
+import { SearchbookComponent } from './searchbook/searchbook.component';
+import { ContactComponent } from './contact/contact.component';
+import { ConfirmationPopoverModule} from 'angular-confirmation-popover';
+import { MatDialogModule} from '@angular/material/dialog'
+import {Ng2OrderModule} from 'ng2-order-pipe';
 
 const routes: Routes= [
   { path: 'bookform', component:BookformComponent },
@@ -28,6 +44,21 @@ const routes: Routes= [
   { path: 'home', component:HomeComponent},
   { path: 'register', component:RegisterComponent},
   { path: 'updateform', component:UpdateformComponent},
+  { path: 'readerhome', component:ReaderhomeComponent},
+  { path: 'readerbooklist', component:ReaderbooklistComponent},
+  { path: 'payment', component:PaymentComponent},
+  { path: 'about', component:AboutComponent},
+  { path: 'adminhome', component:AdminhomeComponent},
+  { path: 'userlist', component:UserlistComponent},
+  { path: 'adminbooklist', component:AdminbooklistComponent},
+  { path: 'stone', component:StoneComponent},
+  { path: 'hobbit', component:HobbitComponent},
+  { path: 'night', component:NightComponent},
+  { path: 'lost', component:LostComponent},
+  { path: 'girl', component:GirlComponent},
+  { path: 'searchbook', component:SearchbookComponent},
+  { path: 'contact', component:ContactComponent},
+
 
 ]
 
@@ -39,13 +70,31 @@ const routes: Routes= [
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    UpdateformComponent
+    UpdateformComponent,
+    ReaderhomeComponent,
+    ReaderbooklistComponent,
+    PaymentComponent,
+    AboutComponent,
+    AdminhomeComponent,
+    UserlistComponent,
+    AdminbooklistComponent,
+    StoneComponent,
+    HobbitComponent,
+    NightComponent,
+    LostComponent,
+    GirlComponent,
+    SearchbookComponent,
+    ContactComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, FormsModule, HttpClientModule,  RouterModule.forRoot(routes), NgToastModule, ReactiveFormsModule,
-    MatDatepickerModule,MatInputModule,  MatNativeDateModule, BrowserAnimationsModule, NgxSliderModule, MatSortModule
+    MatDatepickerModule,MatInputModule,  MatNativeDateModule, BrowserAnimationsModule, NgxSliderModule, MatSortModule, MatDialogModule,  
+    Ng2OrderModule, 
+    ConfirmationPopoverModule.forRoot({
+       confirmButtonType:'danger'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

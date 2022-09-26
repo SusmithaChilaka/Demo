@@ -10,9 +10,9 @@ header{
 .menu ul li{
     list-style-type:none;
     display: inline-block;
-    font-size:30px;
-    margin-left: 24px;
-margin-top: 30px;
+    font-size:25px;
+    margin-left: 30px;
+margin-top: 40px;
 }
 
 .menu ul li:hover{
@@ -26,5 +26,40 @@ margin-top: 30px;
  text-align: center;
  margin-top: 40px;
 }
+ .header-1{
+    background-color: var(--light-bg);
+ }
+ 
+.header-1 .flex{
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin:0 auto;
+ }
+ 
 
-
+.header-1 .flex .share a{
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    color:var(--black);
+ }
+ 
+.header-1 .flex .share a:hover{
+    color:var(--purple);
+ }
+ 
+.header-1 .flex p{
+    font-size: 2rem;
+    color:var(--light-color);
+ }
+ 
+.header-1 .flex p a{
+    color:var(--purple);
+ }
+ 
+.header-1 .flex p a:hover{
+    text-decoration: underline;
+ }
+ 

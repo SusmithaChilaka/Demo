@@ -21,6 +21,7 @@
 </header>
 
 
+
 <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -30,7 +31,7 @@
                         <h6>Please fill the below details</h6>
                     </div>
                     <form>
-                        <form>
+                        <form >
                             <div class="mb-3">
                               <label for="title" class="form-label">Book Title:    </label>
                               <input [(ngModel)]='book.title' type="text" id="title" class="form-control" name="title">
@@ -65,6 +66,12 @@
                                     <option value="horror">Horror</option>
                                     <option value="fantasy">Fantasy</option>
                                     <option value="action">Action</option>
+                                    <option value="novel">Novel</option>
+                                    <option value="biography">Biography</option>
+                                    <option value="crime">Crime</option>
+                                    <option value="auto biography">Auto Biography</option>
+                                    <option value="thriller">Thriller</option>
+                                    <option value="comic">Comic</option>
                                   </select>
                               </div>
                               <div class="mb-3">
@@ -72,10 +79,10 @@
                                 <input [(ngModel)]='book.content' type="text" id="content" class="form-control" name="content" style="height:100px;">
                               </div>
                             <button (click)='save()' style="background: rgb(179, 227, 182);
-                            background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%); color: white; width: 200px; height: 40px;" > Save Book</button>
+                            background:linear-gradient(90deg, rgb(54, 157, 201)0%, rgb(43, 10, 107)100%);color: white; width: 200px; height: 40px;" > Save Book</button>
                           </form>
-                    </form>
+                    </form> 
                 </div>
             </div>
         </div>
-    </div>  
+    </div>  <br><br><br>
